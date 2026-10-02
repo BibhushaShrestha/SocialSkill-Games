@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Child Profile</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background-color: #FFF9C4;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    .float-el{
+      position:fixed;
+      pointer-events:none;
+      opacity:.25;
+      z-index:0;
+      animation:floatAnim 8s ease-in-out infinite;
+    }
+
+    .float-el:nth-child(1){ top:10%; left:5%; font-size:3rem; }
+    .float-el:nth-child(2){ top:70%; left:8%; font-size:2.5rem; animation-delay:2s; }
+    .float-el:nth-child(3){ top:20%; right:5%; font-size:2rem; animation-delay:4s; }
+    .float-el:nth-child(4){ top:80%; right:10%; font-size:3.5rem; animation-delay:1s; }
+    .float-el:nth-child(5){ top:50%; left:3%; font-size:1.8rem; animation-delay:3s; }
+    .float-el:nth-child(6){ top:40%; right:3%; font-size:2.2rem; animation-delay:5s; }
+    .float-el:nth-child(7){ top:5%; right:25%; font-size:2.8rem; animation-delay:1.5s; }
+    .float-el:nth-child(8){ top:88%; left:30%; font-size:2.4rem; animation-delay:3.5s; }
+
+    @keyframes floatAnim{
+      0%,100%{ transform:translateY(0) rotate(0deg); }
+      25%{ transform:translateY(-20px) rotate(5deg); }
+      50%{ transform:translateY(-10px) rotate(-3deg); }
+      75%{ transform:translateY(-25px) rotate(4deg); }
+    }
+
+    .bg-dots{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      opacity:.08;
+      background-image:radial-gradient(circle,#FF8A65 1px,transparent 1px);
+      background-size:30px 30px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .back-btn {
+      background: #ffffff;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .profile-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+      background: #ffd54f;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title i {
+      width: 20px;
+      height: 20px;
+    }
+
+    .progress-bar {
+      background: #eee;
+      border-radius: 10px;
+      height: 10px;
+      margin: 5px 0 15px;
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 10px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      width: 100px;
+      height: 100px;
+      background: #fff8dc;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .badge.locked {
+      opacity: 0.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="float-el">🌟</div>
+  <div class="float-el">⭐</div>
+  <div class="float-el">🌻</div>
+  <div class="float-el">🌈</div>
+  <div class="float-el">✨</div>
+  <div class="float-el">🌼</div>
+  <div class="float-el">☀️</div>
+  <div class="float-el">💛</div>
+  <div class="bg-dots"></div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="left-header">
+        <button class="back-btn" onclick="history.back()">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <h2>My Profile</h2>
+      </div>
+    </div>
+
+    <!-- Profile -->
+    <div class="card profile">
+      <div class="profile-left">
+        <div class="avatar">👦</div>
+        <div>
+          <h3 id="profileName">Sam</h3>
+          <div class="stats">
+            <span id="profileStars">⭐ 0 Stars</span>
+            <span id="profileModules">🎓 0/5 Modules</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module Progress -->
+    <div class="card">
+      <div class="section-title">
+        <i data-lucide="bar-chart-3"></i>
+        <h3>Module Progress</h3>
+      </div>
+
+      <p>Greeting Skills (<span id="modGreeting">0</span>%)</p>
+      <div class="progress-bar">
+        <div id="barGreeting" class="progress" style="width:0%; background:#ffe082;"></div>
+      </div>
+
+      <p>Sharing & Kindness (<span id="modSharing">0</span>%)</p>
+      <div class="progress-bar">
+        <div id="barSharing" class="progress" style="width:0%; background:#ffccbc;"></div>
+      </div>
+
+      <p>Waiting & Turn-Taking (<span id="modWaiting">0</span>%)</p>
+      <div class="progress-bar">
+        <div id="barWaiting" class="progress" style="width:0%; background:#d1c4e9;"></div>
+      </div>
+
+      <p>Emotion Recognition (<span id="modEmotion">0</span>%)</p>
+      <div class="progress-bar">
+        <div id="barEmotion" class="progress" style="width:0%; background:#b2dfdb;"></div>
+      </div>
+
+      <p>Communication & Politeness (<span id="modCommunication">0</span>%)</p>
+      <div class="progress-bar">
+        <div id="barCommunication" class="progress" style="width:0%; background:#c8e6c9;"></div>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <div class="card">
+      <div class="section-title">
+        <i data-lucide="award"></i>
+        <h3>Badges</h3>
+      </div>
+
+      <div id="badgesContainer" class="badges">
+        <div class="badge">🎯<br>First Steps</div>
+        <div class="badge">⭐<br>Star Collector</div>
+        <div class="badge">🚀<br>Super Learner</div>
+        <div class="badge locked">💯<br>Perfect Score</div>
+        <div class="badge locked">🏆<br>Champion</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const API = 'http://localhost:5000/api';
+
+    function getToken() {
+      return localStorage.getItem('token');
+    }
+
+    async function loadProfile() {
+      const token = getToken();
+      if (!token) {
+        window.location.href = 'login.html';
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API}/games/dashboard/me`, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const data = await res.json();
+
+        if (!data.success) {
+          alert('Session expired. Please login again.');
+          window.location.href = 'login.html';
+          return;
+        }
+
+        const d = data.dashboard;
+        localStorage.setItem('childProfileId', d.id);
+        document.getElementById('profileName').innerText = d.childName;
+        document.getElementById('profileStars').innerHTML = `⭐ ${d.stars} Stars`;
+
+        const completedModules = d.moduleProgress.filter(m => {
+          const pct = m.percentage || m.score || 0;
+          return pct > 0;
+        }).length;
+        document.getElementById('profileModules').innerHTML = `🎓 ${completedModules}/5 Modules`;
+
+        const moduleMap = {
+          greeting: 'modGreeting',
+          sharing: 'modSharing',
+          waiting: 'modWaiting',
+          emotion: 'modEmotion',
+          communication: 'modCommunication'
+        };
+        const barMap = {
+          greeting: 'barGreeting',
+          sharing: 'barSharing',
+          waiting: 'barWaiting',
+          emotion: 'barEmotion',
+          communication: 'barCommunication'
+        };
+        const colors = {
+          greeting: '#ffe082',
+          sharing: '#ffccbc',
+          waiting: '#d1c4e9',
+          emotion: '#b2dfdb',
+          communication: '#c8e6c9'
+        };
+
+        d.moduleProgress.forEach(m => {
+          const pct = m.percentage || 0;
+          const el = document.getElementById(moduleMap[m.module]);
+          const bar = document.getElementById(barMap[m.module]);
+          if (el) el.innerText = pct;
+          if (bar) {
+            bar.style.width = pct + '%';
+            bar.style.background = colors[m.module] || '#ffe082';
+          }
+        });
+
+        if (d.badges && d.badges.length > 0) {
+          const container = document.getElementById('badgesContainer');
+          const badgeMap = { Gold: { icon: '🥇', name: 'Gold' }, Silver: { icon: '🥈', name: 'Silver' }, Bronze: { icon: '🥉', name: 'Bronze' } };
+          d.badges.forEach(b => {
+            const info = badgeMap[b];
+            if (!info) return;
+            const div = document.createElement('div');
+            div.className = 'badge';
+            div.innerHTML = `${info.icon}<br>${info.name}`;
+            container.appendChild(div);
+          });
+        }
+      } catch (error) {
+        console.error('Profile load error:', error);
+      }
+    }
+
+    window.addEventListener('pageshow', loadProfile);
+    loadProfile();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

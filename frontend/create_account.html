@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:#FFF9C4;
+background-attachment:fixed;
+overflow-x:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.float-el{
+  position:fixed;
+  pointer-events:none;
+  opacity:.25;
+  z-index:0;
+  animation:floatAnim 8s ease-in-out infinite;
+}
+
+.float-el:nth-child(1){ top:10%; left:5%; font-size:3rem; }
+.float-el:nth-child(2){ top:70%; left:8%; font-size:2.5rem; animation-delay:2s; }
+.float-el:nth-child(3){ top:20%; right:5%; font-size:2rem; animation-delay:4s; }
+.float-el:nth-child(4){ top:80%; right:10%; font-size:3.5rem; animation-delay:1s; }
+.float-el:nth-child(5){ top:50%; left:3%; font-size:1.8rem; animation-delay:3s; }
+.float-el:nth-child(6){ top:40%; right:3%; font-size:2.2rem; animation-delay:5s; }
+.float-el:nth-child(7){ top:5%; right:25%; font-size:2.8rem; animation-delay:1.5s; }
+.float-el:nth-child(8){ top:88%; left:30%; font-size:2.4rem; animation-delay:3.5s; }
+
+@keyframes floatAnim{
+  0%,100%{ transform:translateY(0) rotate(0deg); }
+  25%{ transform:translateY(-20px) rotate(5deg); }
+  50%{ transform:translateY(-10px) rotate(-3deg); }
+  75%{ transform:translateY(-25px) rotate(4deg); }
+}
+
+.bg-dots{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  opacity:.08;
+  background-image:radial-gradient(circle,#FF8A65 1px,transparent 1px);
+  background-size:30px 30px;
+}
+
+.container{
+text-align:center;
+}
+
+.logo{
+font-size:60px;
+background:#f7e7a9;
+width:90px;
+height:90px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+h1{
+color:#555;
+}
+
+.subtitle{
+color:#777;
+margin-bottom:20px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:20px;
+width:320px;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+border:2px solid #eee;
+font-size:14px;
+outline:none;
+box-sizing:border-box;
+}
+
+.pwd-wrapper{
+position:relative;
+width:100%;
+margin:10px 0;
+}
+
+.pwd-wrapper input{
+margin:0;
+padding-right:40px;
+}
+
+.pwd-toggle{
+position:absolute;
+right:12px;
+top:50%;
+transform:translateY(-50%);
+background:none;
+border:none;
+cursor:pointer;
+padding:0;
+margin:0;
+font-size:18px;
+line-height:1;
+color:#888;
+width:auto;
+}
+
+.pwd-toggle:hover{
+transform:translateY(-50%) scale(1.1);
+background:none;
+}
+
+input:focus{
+border-color:#286b33;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#A7D79C,#81C784);
+color:#fff;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+transition:0.3s;
+}
+
+button:hover{
+filter:brightness(1.08);
+transform:scale(1.05);
+}
+
+.back{
+margin-top:15px;
+font-size:14px;
+}
+
+.back a{
+text-decoration:none;
+color:#555;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="float-el">🌟</div>
+<div class="float-el">⭐</div>
+<div class="float-el">🌻</div>
+<div class="float-el">🌈</div>
+<div class="float-el">✨</div>
+<div class="float-el">🌼</div>
+<div class="float-el">☀️</div>
+<div class="float-el">💛</div>
+<div class="bg-dots"></div>
+
+<div class="container">
+
+<div class="logo">🙂</div>
+
+<h1>Create Account</h1>
+<p class="subtitle">Join the fun!</p>
+
+<div class="card">
+
+<input type="text" placeholder="Child's Name">
+
+<input type="text" placeholder="Choose Username">
+
+<input type="tel" placeholder="Phone (optional)">
+
+<input type="email" placeholder="Email (for password reset)">
+
+<div class="pwd-wrapper">
+<input type="password" placeholder="Create Password">
+<button class="pwd-toggle" onclick="togglePwd(this)" type="button">👁️</button>
+</div>
+</div>
+
+<button onclick="register()">🎉 Create Account</button>
+
+<div class="back">
+<a href="login.html">⬅ Back to Login</a>
+</div>
+
+</div>
+
+</div>
+<script>
+function togglePwd(btn) {
+  const inp = btn.previousElementSibling;
+  if (inp.type === 'password') { inp.type = 'text'; btn.textContent = '🙈'; }
+  else { inp.type = 'password'; btn.textContent = '👁️'; }
+}
+
+async function register() {
+
+    const childName = document.querySelectorAll("input")[0].value;
+    const username = document.querySelectorAll("input")[1].value;
+    const phone = document.querySelectorAll("input")[2].value;
+    const email = document.querySelectorAll("input")[3].value;
+    const password = document.querySelectorAll("input")[4].value;
+
+    if (!childName || !username || !password) {
+        alert("Please fill all required fields");
+        return;
+    }
+
+    try {
+
+        const res = await fetch(
+            'http://localhost:5000/api/auth/register',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    childName,
+                    username,
+                    phone,
+                    email,
+                    password
+                })
+            }
+        );
+
+        const data = await res.json();
+
+        console.log(data);
+
+        if (data.success) {
+            alert("Account created successfully!");
+            window.location.href = "login.html";
+        } else {
+            alert(data.message);
+        }
+
+    } catch (error) {
+
+        console.log(error);
+
+        alert("Error creating account");
+    }
+}
+</script>
+
+</body>
+</html>
