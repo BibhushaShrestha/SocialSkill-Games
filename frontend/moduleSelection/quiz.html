@@ -343,6 +343,7 @@
         line-height: 1.4;
       }
       /* ---- Image ---- */
+     .question-img[hidden]{display:none !important;}
      .question-img{
 
 width:100%;
@@ -770,8 +771,11 @@ font-size:22px;
     <div class="container">
 
       <div id="quizScreen">
-        <!-- Image -->
-        <img id="questionImage" class="question-img" alt="Scenario image" />
+        <!-- Image: starts hidden with no alt text, so the browser can never
+             paint a placeholder box or "Scenario image" before the JS runs.
+             quiz.js reveals it per question, or hides it again if the
+             illustration is unreachable. -->
+        <img id="questionImage" class="question-img" alt="" hidden />
 
         <!-- Bear + Question side by side -->
         <div class="question-area">
@@ -873,17 +877,24 @@ font-size:22px;
           shownKeys.push(currentQuestion.questionKey);
 
           const imgEl = document.getElementById("questionImage");
+          imgEl.removeAttribute("src");
           // A missing or broken illustration must never block the question,
           // so fall back to text-only if the file is unreachable.
           imgEl.onerror = () => {
             console.warn("[quiz] scenario image failed to load:", imgEl.src);
+            imgEl.hidden = true;
             imgEl.style.display = "none";
             imgEl.removeAttribute("src");
           };
           if (currentQuestion.image) {
+            // Reveal straight away rather than waiting for the load event:
+            // a browser that answers from cache may never fire "load", which
+            // would otherwise leave the illustration stuck hidden.
+            imgEl.hidden = false;
             imgEl.style.display = "block";
             imgEl.src = currentQuestion.image;
           } else {
+            imgEl.hidden = true;
             imgEl.style.display = "none";
             imgEl.removeAttribute("src");
           }

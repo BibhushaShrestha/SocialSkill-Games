@@ -16,43 +16,43 @@
 const questionBank = {
   greeting: [
     {
-      id: 1, q: "Leo says \"Hi!\" to Nina. What can Nina say?",
+      id: 1, image: "https://images.pexels.com/photos/5278985/pexels-photo-5278985.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Leo says \"Hi!\" to Nina. What can Nina say?",
       options: ["Go away.", "\"Hi!\"", "Stop.", "Run away"],
       correct: 1, difficulty: -1.8, discrimination: 1.0, guess: 0.25,
       explanation: "We say hi back when someone greets us."
     },
     {
-      id: 2, q: "Maya waves at Sara. What can Sara do?",
+      id: 2, image: "https://images.pexels.com/photos/8617758/pexels-photo-8617758.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Maya waves at Sara. What can Sara do?",
       options: ["Push Maya", "Wave back", "Cry", "Take Maya's toy"],
       correct: 1, difficulty: -1.5, discrimination: 1.0, guess: 0.25,
       explanation: "Waving back is a friendly response."
     },
     {
-      id: 3, q: "Someone says \"Hello!\" to you. What can you say?",
+      id: 3, image: "https://images.pexels.com/photos/8423069/pexels-photo-8423069.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Someone says \"Hello!\" to you. What can you say?",
       options: ["Go away.", "\"No!\"", "\"Hello!\"", "Nothing"],
       correct: 2, difficulty: -1.2, discrimination: 1.0, guess: 0.25,
       explanation: "Saying hello back is polite."
     },
     {
-      id: 4, q: "Aarav sees Ben at school. What can Aarav say?",
+      id: 4, image: "https://images.pexels.com/photos/2675061/pexels-photo-2675061.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Aarav sees Ben at school. What can Aarav say?",
       options: ["\"Give me that.\"", "\"Hi, Ben!\"", "\"Move.\"", "\"Go away.\""],
       correct: 1, difficulty: -0.9, discrimination: 1.0, guess: 0.25,
       explanation: "Saying hi by name is a friendly greeting."
     },
     {
-      id: 5, q: "Tara smiles and says \"Hi!\" to you. What can you do?",
+      id: 5, image: "https://images.pexels.com/photos/8617758/pexels-photo-8617758.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Tara smiles and says \"Hi!\" to you. What can you do?",
       options: ["Push Tara", "Shout", "Smile and say \"Hi!\"", "Walk away angrily"],
       correct: 2, difficulty: -0.6, discrimination: 1.0, guess: 0.25,
       explanation: "Smiling and greeting back matches Tara's friendliness."
     },
     {
-      id: 6, q: "Nina meets her teacher in the morning. What can she say?",
+      id: 6, image: "https://images.pexels.com/photos/5212329/pexels-photo-5212329.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Nina meets her teacher in the morning. What can she say?",
       options: ["\"Good night!\"", "\"Go away!\"", "\"Give me that.\"", "\"Good morning!\""],
       correct: 3, difficulty: -0.3, discrimination: 1.0, guess: 0.25,
       explanation: "Good morning is the right greeting for the morning."
     },
     {
-      id: 7, q: "Alex says \"Hello!\" while you are putting away toys. What can you do?",
+      id: 7, image: "https://images.pexels.com/photos/8423069/pexels-photo-8423069.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Alex says \"Hello!\" while you are putting away toys. What can you do?",
       options: ["Throw the toys", "Look up and say \"Hello!\"", "Shout", "Take Alex's things"],
       correct: 1, difficulty: 0.0, discrimination: 1.0, guess: 0.25,
       explanation: "Even while busy, a quick hello is polite."
@@ -127,37 +127,37 @@ const questionBank = {
 
   sharing: [
     {
-      id: 1, q: "Your friend wants to play with your toy. What should you do?",
+      id: 1, image: "https://images.pexels.com/photos/6966339/pexels-photo-6966339.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Your friend wants to play with your toy. What should you do?",
       options: ["Hide it", "Share it", "Refuse rudely"],
       correct: 1, difficulty: -2.0, discrimination: 1.0, guess: 0.33,
       explanation: "Sharing toys makes friends happy."
     },
     {
-      id: 2, q: "Someone has no pencil. What can you do?",
+      id: 2, image: "https://images.pexels.com/photos/5905458/pexels-photo-5905458.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Someone has no pencil. What can you do?",
       options: ["Keep silent", "Share yours", "Laugh"],
       correct: 1, difficulty: -1.6, discrimination: 1.0, guess: 0.33,
       explanation: "Sharing what you have helps others."
     },
     {
-      id: 3, q: "How do friends feel when you share?",
+      id: 3, image: "https://images.pexels.com/photos/5278985/pexels-photo-5278985.jpeg?auto=compress&cs=tinysrgb&w=400", q: "How do friends feel when you share?",
       options: ["Angry", "Happy", "Sad"],
       correct: 1, difficulty: -1.2, discrimination: 1.0, guess: 0.33,
       explanation: "Sharing makes people feel happy and cared for."
     },
     {
-      id: 4, q: "You have extra snacks. What can you do?",
+      id: 4, image: "https://images.pexels.com/photos/8613146/pexels-photo-8613146.jpeg?auto=compress&cs=tinysrgb&w=400", q: "You have extra snacks. What can you do?",
       options: ["Throw them", "Share with friends", "Eat alone"],
       correct: 1, difficulty: -0.8, discrimination: 1.0, guess: 0.33,
       explanation: "Sharing food is a kind thing to do."
     },
     {
-      id: 5, q: "Sharing builds what between people?",
+      id: 5, image: "https://images.pexels.com/photos/8422173/pexels-photo-8422173.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Sharing builds what between people?",
       options: ["Fight", "Friendship", "Noise"],
       correct: 1, difficulty: -0.4, discrimination: 1.0, guess: 0.33,
       explanation: "Sharing helps build strong friendships."
     },
     {
-      id: 6, q: "Your classmate forgot their crayons. What is the kind thing to do?",
+      id: 6, image: "https://images.pexels.com/photos/5905458/pexels-photo-5905458.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Your classmate forgot their crayons. What is the kind thing to do?",
       options: ["Laugh at them", "Offer to share yours", "Tell the teacher they are bad"],
       correct: 1, difficulty: -0.1, discrimination: 1.0, guess: 0.33,
       explanation: "Offering to help shows kindness."
@@ -238,37 +238,37 @@ const questionBank = {
 
   waiting: [
     {
-      id: 1, q: "Someone is talking to you. What should you do?",
+      id: 1, image: "https://images.pexels.com/photos/7092351/pexels-photo-7092351.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Someone is talking to you. What should you do?",
       options: ["Interrupt", "Wait", "Shout"],
       correct: 1, difficulty: -2.0, discrimination: 1.0, guess: 0.33,
       explanation: "Waiting while someone talks shows respect."
     },
     {
-      id: 2, q: "You are in a line at the store. What should you do?",
+      id: 2, image: "https://images.pexels.com/photos/8617987/pexels-photo-8617987.jpeg?auto=compress&cs=tinysrgb&w=400", q: "You are in a line at the store. What should you do?",
       options: ["Push ahead", "Wait", "Leave"],
       correct: 1, difficulty: -1.6, discrimination: 1.0, guess: 0.33,
       explanation: "Waiting in line is the right thing to do."
     },
     {
-      id: 3, q: "Waiting shows that you are...",
+      id: 3, image: "https://images.pexels.com/photos/8500643/pexels-photo-8500643.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Waiting shows that you are...",
       options: ["Angry", "Patient", "Noisy"],
       correct: 1, difficulty: -1.2, discrimination: 1.0, guess: 0.33,
       explanation: "Waiting shows patience."
     },
     {
-      id: 4, q: "You are at a restaurant and food is coming. What should you do?",
+      id: 4, image: "https://images.pexels.com/photos/8419196/pexels-photo-8419196.jpeg?auto=compress&cs=tinysrgb&w=400", q: "You are at a restaurant and food is coming. What should you do?",
       options: ["Yell at the server", "Wait calmly", "Run to the kitchen"],
       correct: 1, difficulty: -0.8, discrimination: 1.0, guess: 0.33,
       explanation: "Waiting calmly at a restaurant is polite."
     },
     {
-      id: 5, q: "Your friend is on the slide. You want a turn. What should you do?",
+      id: 5, image: "https://images.pexels.com/photos/8197534/pexels-photo-8197534.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Your friend is on the slide. You want a turn. What should you do?",
       options: ["Push them off", "Shout at them", "Wait for your turn"],
       correct: 2, difficulty: -0.5, discrimination: 1.0, guess: 0.33,
       explanation: "Waiting for your turn is fair and safe."
     },
     {
-      id: 6, q: "The teacher is talking. You have a question. What should you do?",
+      id: 6, image: "https://images.pexels.com/photos/7092351/pexels-photo-7092351.jpeg?auto=compress&cs=tinysrgb&w=400", q: "The teacher is talking. You have a question. What should you do?",
       options: ["Shout out your question", "Raise your hand and wait", "Walk out"],
       correct: 1, difficulty: -0.2, discrimination: 1.0, guess: 0.33,
       explanation: "Raising your hand and waiting is the right way."
@@ -349,37 +349,37 @@ const questionBank = {
 
   emotion: [
     {
-      id: 1, q: "Your friend is crying. What can you do?",
+      id: 1, image: "https://images.pexels.com/photos/256657/pexels-photo-256657.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Your friend is crying. What can you do?",
       options: ["Ignore", "Help them", "Laugh"],
       correct: 1, difficulty: -2.0, discrimination: 1.0, guess: 0.33,
       explanation: "Helping someone who is crying is kind."
     },
     {
-      id: 2, q: "A happy face usually means someone is...",
+      id: 2, image: "https://images.pexels.com/photos/5278985/pexels-photo-5278985.jpeg?auto=compress&cs=tinysrgb&w=400", q: "A happy face usually means someone is...",
       options: ["Crying", "Angry", "Smiling"],
       correct: 2, difficulty: -1.6, discrimination: 1.0, guess: 0.33,
       explanation: "Happy people usually smile."
     },
     {
-      id: 3, q: "When someone feels sad, they might...",
+      id: 3, image: "https://images.pexels.com/photos/256657/pexels-photo-256657.jpeg?auto=compress&cs=tinysrgb&w=400", q: "When someone feels sad, they might...",
       options: ["Laugh", "Run", "Cry"],
       correct: 2, difficulty: -1.2, discrimination: 1.0, guess: 0.33,
       explanation: "Crying is a common sign of sadness."
     },
     {
-      id: 4, q: "An angry face often looks like someone is...",
+      id: 4, image: "https://images.pexels.com/photos/7929377/pexels-photo-7929377.jpeg?auto=compress&cs=tinysrgb&w=400", q: "An angry face often looks like someone is...",
       options: ["Happy", "Mad", "Calm"],
       correct: 1, difficulty: -0.8, discrimination: 1.0, guess: 0.33,
       explanation: "An angry face shows that someone is mad."
     },
     {
-      id: 5, q: "An emotion is a...",
+      id: 5, image: "https://images.pexels.com/photos/5278985/pexels-photo-5278985.jpeg?auto=compress&cs=tinysrgb&w=400", q: "An emotion is a...",
       options: ["Object", "Feeling", "Food"],
       correct: 1, difficulty: -0.5, discrimination: 1.0, guess: 0.33,
       explanation: "Emotions are feelings we have inside."
     },
     {
-      id: 6, q: "You feel scared during a thunderstorm. What can you do?",
+      id: 6, image: "/images/scenarios/emotion-06.svg", q: "You feel scared during a thunderstorm. What can you do?",
       options: ["Stay calm and talk to someone you trust", "Run outside", "Shout at the sky"],
       correct: 0, difficulty: -0.2, discrimination: 1.0, guess: 0.33,
       explanation: "Staying calm and talking to someone helps when scared."
@@ -460,37 +460,37 @@ const questionBank = {
 
   communication: [
     {
-      id: 1, q: "You need help from a teacher. What should you say?",
+      id: 1, image: "https://images.pexels.com/photos/5905458/pexels-photo-5905458.jpeg?auto=compress&cs=tinysrgb&w=400", q: "You need help from a teacher. What should you say?",
       options: ["Demand loudly", "\"Please, can you help me?\"", "Stay silent"],
       correct: 1, difficulty: -2.0, discrimination: 1.0, guess: 0.33,
       explanation: "Saying please is polite when asking for help."
     },
     {
-      id: 2, q: "We communicate with other people by...",
+      id: 2, image: "https://images.pexels.com/photos/8617758/pexels-photo-8617758.jpeg?auto=compress&cs=tinysrgb&w=400", q: "We communicate with other people by...",
       options: ["Talking", "Objects", "Food"],
       correct: 0, difficulty: -1.6, discrimination: 1.0, guess: 0.33,
       explanation: "Talking is one way we communicate."
     },
     {
-      id: 3, q: "Which word is polite to use?",
+      id: 3, image: "https://images.pexels.com/photos/5278985/pexels-photo-5278985.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Which word is polite to use?",
       options: ["Please", "Shout", "Hit"],
       correct: 0, difficulty: -1.2, discrimination: 1.0, guess: 0.33,
       explanation: "Please is a polite word."
     },
     {
-      id: 4, q: "We listen with our...",
+      id: 4, image: "https://images.pexels.com/photos/8197534/pexels-photo-8197534.jpeg?auto=compress&cs=tinysrgb&w=400", q: "We listen with our...",
       options: ["Hands", "Ears", "Eyes"],
       correct: 1, difficulty: -0.8, discrimination: 1.0, guess: 0.33,
       explanation: "We use our ears to listen."
     },
     {
-      id: 5, q: "Good communication means...",
+      id: 5, image: "https://images.pexels.com/photos/8423069/pexels-photo-8423069.jpeg?auto=compress&cs=tinysrgb&w=400", q: "Good communication means...",
       options: ["Shouting", "Clear and kind talking", "Fighting"],
       correct: 1, difficulty: -0.5, discrimination: 1.0, guess: 0.33,
       explanation: "Good communication is clear and kind."
     },
     {
-      id: 6, q: "You bump into someone by accident. What should you say?",
+      id: 6, image: "https://images.pexels.com/photos/5905458/pexels-photo-5905458.jpeg?auto=compress&cs=tinysrgb&w=400", q: "You bump into someone by accident. What should you say?",
       options: ["Ignore them", "\"Sorry! Are you okay?\"", "Blame them"],
       correct: 1, difficulty: -0.2, discrimination: 1.0, guess: 0.33,
       explanation: "Apologizing when you make a mistake is polite."
@@ -571,59 +571,32 @@ const questionBank = {
 };
 
 // ============================================================
-// Visual supports — EASY items only
+// Scenario illustrations
 // ------------------------------------------------------------
-// A picture is attached ONLY to items at or below
-// IMAGE_DIFFICULTY_MAX (b <= 0). Two reasons:
+// Each Easy item above carries its own `image` field, written inline
+// on the question object exactly like the rest of its data - nothing
+// is computed here. Medium and Hard items have no `image` key at all,
+// so the page renders them as plain text. Two reasons:
 //
 //   1. The scaffolding should fade as the skill grows. A child
 //      who answers the easy items correctly is moved to harder
-//      items, where the picture is gone — so support is
+//      items, where the picture is gone - so support is
 //      withdrawn exactly when it stops being needed.
 //   2. The harder items are the ones that require inferring
 //      intent or mental state. A picture there would mostly
 //      restate the question and hand over the answer.
 //
-// Art is produced by scripts/generateScenarioArt.mjs, so the
-// files are local (work offline, no hotlink rot) and share one
-// consistent style, which keeps decoding the picture from
-// competing with the social reasoning being assessed.
-// server.js mounts express.static at the `frontend/` directory, so a file at
-// frontend/images/scenarios/x.svg is served from /images/scenarios/x.svg
-// (NOT /frontend/images/... which 404s).
-const IMAGE_DIR = '/images/scenarios/';
+// Most illustrations are Pexels photo URLs, so they need an internet
+// connection. emotion-06 is the one exception: the reference set has
+// no photo of a scared child, so it uses a locally drawn SVG kept at
+// frontend/images/scenarios/emotion-06.svg (served from
+// /images/scenarios/... by the express.static mount in server.js).
 const IMAGE_DIFFICULTY_MAX = 0;
-
-// Intended illustrated items, per module.
-const SCENARIO_ART = {
-  greeting: [1, 2, 3, 4, 5, 6, 7],
-  sharing: [1, 2, 3, 4, 5, 6],
-  waiting: [1, 2, 3, 4, 5, 6],
-  emotion: [1, 2, 3, 4, 5, 6],
-  communication: [1, 2, 3, 4, 5, 6],
-};
 
 const scenarioWarnings = [];
 
-for (const [module, ids] of Object.entries(SCENARIO_ART)) {
-  for (const id of ids) {
-    const item = questionBank[module].find((it) => it.id === id);
-    if (!item) {
-      scenarioWarnings.push(`${module}:${id} not found in bank`);
-      continue;
-    }
-    if (item.difficulty > IMAGE_DIFFICULTY_MAX) {
-      scenarioWarnings.push(
-        `${module}:${id} b=${item.difficulty} is above ${IMAGE_DIFFICULTY_MAX}, skipping image`
-      );
-      continue;
-    }
-    item.image = `${IMAGE_DIR}${module}-${String(id).padStart(2, '0')}.svg`;
-  }
-}
-
-// Safety net: nothing above the threshold may carry an image,
-// whatever a future edit to SCENARIO_ART says.
+// Safety net: an Easy item may carry an image, nothing above it may.
+// This only reports and strips - it never adds one.
 for (const [module, items] of Object.entries(questionBank)) {
   for (const item of items) {
     if (item.image && item.difficulty > IMAGE_DIFFICULTY_MAX) {
